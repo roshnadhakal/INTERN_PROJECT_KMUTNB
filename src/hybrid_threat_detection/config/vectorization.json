@@ -1,0 +1,33 @@
+{
+    "tfidf": true,
+    "bow": false,
+    "deep_learning": {
+        "enabled": true,
+        "tokenizer_params": {
+            "num_words": 20000,
+            "oov_token": "<OOV>",
+            "filters": "!\"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n"
+        },
+        "max_len": 100,
+        "use_embeddings": true,
+        "embedding_type": "glove",
+        "embedding_dim": 100,
+        "embedding_path": "hybrid-threat-detection/src/hybrid_threat_detection/config/embeddings/glove.6B.100d.txt"
+    },
+    "tfidf_params": {
+        "max_features": 10000,
+        "ngram_range": {"min": 1, "max": 2},
+        "stop_words": "english"
+    },
+    "datasets": {
+        "xss": {
+            "payload_col": "post_data"
+        },
+        "sql_injection": {
+            "payload_col": "payload"
+        },
+        "path_traversal": {
+            "payload_col": "payload"
+        }
+    }
+}

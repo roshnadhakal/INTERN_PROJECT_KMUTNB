@@ -1,0 +1,8 @@
+{
+    "test_size": 0.2,
+    "random_state": 42,
+    "shuffle": true,
+    "stratify": true,
+    "cross_validation_folds": 0,
+    "split_by_attack_type": true
+}

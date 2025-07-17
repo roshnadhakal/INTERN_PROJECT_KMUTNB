@@ -1,0 +1,17 @@
+{
+    "attack_type_mapping": {
+        "xss": 0,
+        "sql_injection": 1,
+        "path_traversal": 2
+    },
+    "label_mapping": {
+        "benign": 0,
+        "malicious": 1
+    },
+    "metadata_columns": [
+        "src_ip",
+        "dest_ip",
+        "timestamp",
+        "source_file"
+    ]
+}
