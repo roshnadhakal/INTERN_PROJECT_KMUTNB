@@ -1,0 +1,13 @@
+{
+  "vectorization_methods": [
+    "tfidf",
+    "tokenizer",
+    "sequences",
+    "padded_sequences",
+    "embedding_matrix",
+    "embedding_info"
+  ],
+  "vocab_size": 21,
+  "max_len": 100,
+  "timestamp": "2025-07-18T10:56:20.123044"
+}

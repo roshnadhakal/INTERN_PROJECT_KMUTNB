@@ -24,13 +24,13 @@ COLUMN_MAPPINGS = {
     },
     "sql_injection": {
         "payload_col": "payload",
-        "label_col": "alert",         # Need to verify
+        "label_col": "alert",         
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     },
     "path_traversal": {
         "payload_col": "payload",
-        "label_col": "alert",         # Need to verify
+        "label_col": "alert",         
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     }

@@ -1,7 +1,7 @@
 import logging
 import pandas as pd
-from hybrid_threat_detection.features.text_vectorizer import TextVectorizer
-from hybrid_threat_detection.utils.helpers import setup_logging, load_json
+from src.hybrid_threat_detection.features.text_vectorizer import TextVectorizer
+from src.hybrid_threat_detection.utils.helpers import setup_logging, load_json
 
 def main():
     setup_logging()
@@ -10,13 +10,13 @@ def main():
     try:
         # 1. Load sample data 
         data = {
-            "xss": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
-            "sql_injection": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase1/cleaning/sql_injection_cleaned_sample.csv"),
-            "path_traversal": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase1/cleaning/path_traversal_cleaned_sample.csv")
+            "xss": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+            "sql_injection": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/sql_injection_cleaned_sample.csv"),
+            "path_traversal": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/path_traversal_cleaned_sample.csv")
         }
         
         # 2. Load config
-        config = load_json("hybrid-threat-detection/src/hybrid_threat_detection/config/vectorization_config.json")
+        config = load_json("src/hybrid_threat_detection/config/vectorization_config.json")
         
         # 3. Initialize and run vectorizer
         vectorizer = TextVectorizer(config)

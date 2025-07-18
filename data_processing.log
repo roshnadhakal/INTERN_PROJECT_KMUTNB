@@ -1,0 +1,351 @@
+2025-07-18 09:54:30,024 - __main__ - INFO - Loading datasets from configured files...
+2025-07-18 09:54:30,030 - __main__ - INFO - Loaded xss with shape (167, 33)
+2025-07-18 09:54:30,445 - __main__ - INFO - Loaded sql_injection with shape (11740, 41)
+2025-07-18 09:54:31,390 - __main__ - INFO - Loaded path_traversal with shape (42340, 38)
+2025-07-18 09:54:31,390 - __main__ - INFO - Starting cleaning for xss
+2025-07-18 09:54:31,391 - __main__ - INFO - Null counts before cleaning in xss:
+post_data     113
+event_type     57
+dtype: int64
+2025-07-18 09:54:31,392 - __main__ - INFO - Removed 167 rows with null values in xss
+2025-07-18 09:54:31,392 - __main__ - INFO - Found 0 duplicates in xss
+2025-07-18 09:54:31,392 - __main__ - INFO - Removed 0 duplicates from xss
+2025-07-18 09:54:31,392 - __main__ - INFO - Normalizing payloads in xss...
+2025-07-18 09:54:31,393 - __main__ - INFO - Payload normalization completed for xss
+2025-07-18 09:54:31,394 - __main__ - INFO - Class distribution before balancing in xss:
+Series([], Name: count, dtype: int64)
+2025-07-18 09:54:31,394 - __main__ - WARNING - Only one class found in xss, skipping balancing
+2025-07-18 09:54:31,394 - __main__ - INFO - Saved cleaning stats for xss to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaning_stats.json
+2025-07-18 09:54:31,396 - __main__ - INFO - Saved cleaned sample for xss to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv
+2025-07-18 09:54:31,397 - __main__ - INFO - Completed cleaning for xss. Final shape: (0, 33)
+2025-07-18 09:54:31,397 - __main__ - INFO - Starting cleaning for sql_injection
+2025-07-18 09:54:31,398 - __main__ - INFO - Null counts before cleaning in sql_injection:
+payload    9490
+alert      9490
+dtype: int64
+2025-07-18 09:54:31,400 - __main__ - INFO - Removed 9490 rows with null values in sql_injection
+2025-07-18 09:54:31,405 - __main__ - INFO - Found 0 duplicates in sql_injection
+2025-07-18 09:54:31,405 - __main__ - INFO - Removed 0 duplicates from sql_injection
+2025-07-18 09:54:31,406 - __main__ - INFO - Normalizing payloads in sql_injection...
+2025-07-18 09:54:31,459 - __main__ - INFO - Payload normalization completed for sql_injection
+2025-07-18 09:54:31,460 - __main__ - INFO - Class distribution before balancing in sql_injection:
+alert
+{'action': 'allowed', 'gid': 1, 'signature_id': 2053468, 'rev': 1, 'signature': 'ET WEB_SERVER Possible SQL Injection UNION SELECT in HTTP Request Body', 'category': 'Attempted Administrator Privilege Gain', 'metadata': {'performance_impact': ['Moderate'], 'tag': ['SQL_Injection'], 'updated_at': ['2024_06_11'], 'mitre_tactic_id': ['TA0001'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'deployment': ['SSLDecrypt', 'Perimeter'], 'mitre_technique_id': ['T1190'], 'attack_target': ['Web_Server'], 'affected_product': ['Web_Server_Applications'], 'signature_severity': ['Major'], 'created_at': ['2024_06_11'], 'confidence': ['Medium'], 'mitre_tactic_name': ['Initial_Access']}, 'severity': 1}    2245
+{'action': 'allowed', 'gid': 1, 'signature_id': 2210061, 'rev': 1, 'signature': 'SURICATA STREAM spurious retransmission', 'category': 'Generic Protocol Command Decode', 'severity': 3}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     5
+Name: count, dtype: int64
+2025-07-18 09:54:31,460 - __main__ - INFO - Imbalance ratio in sql_injection: 449.0:1
+2025-07-18 09:54:31,460 - __main__ - INFO - Applying SMOTE to sql_injection...
+2025-07-18 09:54:31,460 - __main__ - ERROR - SMOTE failed for sql_injection: name 'payload_col' is not defined
+2025-07-18 09:54:31,460 - __main__ - INFO - Falling back to random oversampling...
+2025-07-18 09:54:31,465 - __main__ - INFO - Random oversampling completed. New shape: (4490, 41)
+2025-07-18 09:54:31,466 - __main__ - INFO - Saved cleaning stats for sql_injection to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/sql_injection_cleaning_stats.json
+2025-07-18 09:54:31,472 - __main__ - INFO - Saved cleaned sample for sql_injection to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/sql_injection_cleaned_sample.csv
+2025-07-18 09:54:31,472 - __main__ - INFO - Completed cleaning for sql_injection. Final shape: (4490, 41)
+2025-07-18 09:54:31,472 - __main__ - INFO - Starting cleaning for path_traversal
+2025-07-18 09:54:31,475 - __main__ - INFO - Null counts before cleaning in path_traversal:
+payload    37238
+alert      37132
+dtype: int64
+2025-07-18 09:54:31,479 - __main__ - INFO - Removed 37238 rows with null values in path_traversal
+2025-07-18 09:54:31,482 - __main__ - INFO - Found 541 duplicates in path_traversal
+2025-07-18 09:54:31,484 - __main__ - INFO - Removed 541 duplicates from path_traversal
+2025-07-18 09:54:31,484 - __main__ - INFO - Normalizing payloads in path_traversal...
+2025-07-18 09:54:31,512 - __main__ - INFO - Payload normalization completed for path_traversal
+2025-07-18 09:54:31,513 - __main__ - INFO - Class distribution before balancing in path_traversal:
+alert
+{'metadata': {'updated_at': ['2019_08_22'], 'created_at': ['2010_07_30']}, 'action': 'allowed', 'cve_id': 'CVE-2006-3602 CVE-2006-4458 CVE-2006-4542', 'signature_id': 2003099, 'rev': 8, 'category': 'access to a potentially vulnerable web application', 'signature': 'ET WEB_SERVER Poison Null Byte', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                     3665
+{'metadata': {'reviewed_at': ['2024_03_20'], 'attack_target': ['Web_Server'], 'updated_at': ['2022_12_01'], 'created_at': ['2014_09_04'], 'signature_severity': ['Major']}, 'action': 'allowed', 'signature_id': 2019110, 'rev': 5, 'category': 'Web Application Attack', 'signature': 'ET WEB_SERVER Likely Malicious Request for /proc/self/fd/', 'severity': 1, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                             544
+{'metadata': {'updated_at': ['2020_08_20'], 'created_at': ['2010_07_30']}, 'action': 'allowed', 'signature_id': 2009362, 'rev': 7, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                      137
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_29'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049400, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER /etc/passwd Detected in URI', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                50
+{'metadata': {'attack_target': ['Web_Server'], 'updated_at': ['2022_12_01'], 'created_at': ['2011_01_25'], 'deployment': ['Perimeter']}, 'action': 'allowed', 'signature_id': 2012230, 'rev': 7, 'category': 'Web Application Attack', 'signature': 'ET WEB_SERVER Likely Malicious Request for /proc/self/environ', 'severity': 1, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                             35
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_29'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049401, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER /etc/hosts Detected in URI', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                 33
+{'metadata': {'updated_at': ['2020_04_21'], 'created_at': ['2010_07_30']}, 'action': 'allowed', 'signature_id': 2009485, 'rev': 7, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER /etc/shadow Detected in URI', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           24
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101122, 'rev': 8, 'category': 'Attempted Information Leak', 'signature': 'GPL WEB_SERVER /etc/passwd', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          14
+{'metadata': {'updated_at': ['2020_04_21'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101129, 'rev': 9, 'category': 'Attempted Information Leak', 'signature': 'GPL WEB_SERVER .htaccess access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     11
+{'action': 'allowed', 'signature_id': 2210061, 'rev': 1, 'category': 'Generic Protocol Command Decode', 'signature': 'SURICATA STREAM spurious retransmission', 'severity': 3, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   6
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101371, 'rev': 7, 'category': 'access to a potentially vulnerable web application', 'signature': 'GPL WEB_SERVER /etc/motd access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                              4
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'updated_at': ['2022_07_28'], 'affected_product': ['Web_Server_Applications'], 'deployment': ['SSLDecrypt', 'Perimeter'], 'created_at': ['2022_07_28'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2037838, 'rev': 1, 'category': 'access to a potentially vulnerable web application', 'signature': 'ET SCAN Web Scanner - Fuzz Faster U Fool (Inbound)', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                      3
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'cve_id': 'CVE-2001-0835', 'signature_id': 2101847, 'rev': 12, 'category': 'access to a potentially vulnerable web application', 'signature': 'GPL WEB_SERVER webalizer access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                  3
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101370, 'rev': 8, 'category': 'access to a potentially vulnerable web application', 'signature': 'GPL WEB_SERVER /etc/inetd.conf access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                        2
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 54616}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 54619}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49711}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49727}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49731}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49717}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49766}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49768}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49764}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49776}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49762}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49782}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49723}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49729}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49721}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101071, 'rev': 8, 'category': 'Web Application Attack', 'signature': 'GPL WEB_SERVER .htpasswd access', 'severity': 1, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49733}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49719}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49741}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 55412}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 55414}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'attack_target': ['Server'], 'mitre_technique_id': ['T1190'], 'mitre_technique_name': ['Exploit_Public_Facing_Application'], 'tag': ['LFI', 'RFI', 'Exploit'], 'mitre_tactic_id': ['TA0001'], 'signature_severity': ['Major'], 'mitre_tactic_name': ['Initial_Access'], 'confidence': ['High'], 'updated_at': ['2022_05_31'], 'deployment': ['SSLDecrypt', 'Perimeter', 'Internal'], 'created_at': ['2022_05_31']}, 'action': 'allowed', 'signature_id': 2036730, 'rev': 1, 'category': 'Web Application Attack', 'signature': 'ET EXPLOIT Local File Inclusion with Shell Execution via proc/self/environ', 'severity': 1, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 49715}, 'target': {'ip': '172.31.28.38', 'port': 80}}       1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 55424}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 55426}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'cve': ['CVE_2000_0778'], 'updated_at': ['2020_04_22'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'cve_id': 'CVE-2000-0778', 'signature_id': 2101016, 'rev': 16, 'category': 'access to a potentially vulnerable web application', 'signature': 'GPL WEB_SERVER global.asa access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                       1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 51973}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'performance_impact': ['Low'], 'attack_target': ['Web_Server'], 'confidence': ['High'], 'affected_product': ['Linux'], 'deployment': ['Perimeter', 'SSLDecrypt'], 'updated_at': ['2023_11_30'], 'created_at': ['2023_11_29'], 'signature_severity': ['Informational']}, 'action': 'allowed', 'signature_id': 2049402, 'rev': 1, 'category': 'Attempted Information Leak', 'signature': 'ET WEB_SERVER .bash_history Detected in URI', 'severity': 2, 'gid': 1, 'source': {'ip': '183.89.248.147', 'port': 52675}, 'target': {'ip': '172.31.28.38', 'port': 80}}                                                                                                                                                                              1
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'signature_id': 2101852, 'rev': 5, 'category': 'access to a potentially vulnerable web application', 'signature': 'GPL WEB_SERVER robots.txt access', 'severity': 2, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                             1
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_07_30']}, 'action': 'allowed', 'signature_id': 2000560, 'rev': 10, 'category': 'Misc activity', 'signature': 'ET POLICY HTTP CONNECT Tunnel Attempt Inbound', 'severity': 3, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
+{'metadata': {'updated_at': ['2019_07_26'], 'created_at': ['2010_09_23']}, 'action': 'allowed', 'cve_id': 'CVE-2002-0614', 'signature_id': 2101738, 'rev': 8, 'category': 'Web Application Attack', 'signature': 'GPL WEB_SERVER global.inc access', 'severity': 1, 'gid': 1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1
+Name: count, dtype: int64
+2025-07-18 09:54:31,514 - __main__ - INFO - Imbalance ratio in path_traversal: 3665.0:1
+2025-07-18 09:54:31,514 - __main__ - INFO - Applying SMOTE to path_traversal...
+2025-07-18 09:54:31,514 - __main__ - ERROR - SMOTE failed for path_traversal: name 'payload_col' is not defined
+2025-07-18 09:54:31,514 - __main__ - INFO - Falling back to random oversampling...
+2025-07-18 09:54:31,521 - __main__ - INFO - Random oversampling completed. New shape: (7330, 38)
+2025-07-18 09:54:31,522 - __main__ - INFO - Saved cleaning stats for path_traversal to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/path_traversal_cleaning_stats.json
+2025-07-18 09:54:31,535 - __main__ - INFO - Saved cleaned sample for path_traversal to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/path_traversal_cleaned_sample.csv
+2025-07-18 09:54:31,535 - __main__ - INFO - Completed cleaning for path_traversal. Final shape: (7330, 38)
+2025-07-18 10:22:11,883 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+2025-07-18 10:26:47,776 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+2025-07-18 10:27:13,452 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+2025-07-18 10:27:23,199 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+2025-07-18 10:31:52,774 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csvs'
+2025-07-18 10:45:25,850 - src.hybrid_threat_detection.features.encoding - INFO - Starting encoding for xss
+2025-07-18 10:45:25,851 - src.hybrid_threat_detection.features.encoding - INFO - Added attack type 'XSS' to xss
+2025-07-18 10:45:25,852 - src.hybrid_threat_detection.features.encoding - INFO - Encoded labels for xss. Distribution:
+label
+0    100
+Name: count, dtype: int64
+2025-07-18 10:45:25,853 - src.hybrid_threat_detection.features.encoding - INFO - Completed encoding for xss
+2025-07-18 10:45:25,853 - src.hybrid_threat_detection.features.encoding - INFO - Starting encoding for sql_injection
+2025-07-18 10:45:25,854 - src.hybrid_threat_detection.features.encoding - INFO - Added attack type 'SQLI' to sql_injection
+2025-07-18 10:45:25,857 - src.hybrid_threat_detection.features.encoding - INFO - Encoded labels for sql_injection. Distribution:
+label
+0    82
+1    18
+Name: count, dtype: int64
+2025-07-18 10:45:25,859 - src.hybrid_threat_detection.features.encoding - INFO - Completed encoding for sql_injection
+2025-07-18 10:45:25,859 - src.hybrid_threat_detection.features.encoding - INFO - Starting encoding for path_traversal
+2025-07-18 10:45:25,859 - src.hybrid_threat_detection.features.encoding - INFO - Added attack type 'PathTraversal' to path_traversal
+2025-07-18 10:45:25,860 - src.hybrid_threat_detection.features.encoding - INFO - Encoded labels for path_traversal. Distribution:
+label
+0    55
+1    45
+Name: count, dtype: int64
+2025-07-18 10:45:25,861 - src.hybrid_threat_detection.features.encoding - INFO - Completed encoding for path_traversal
+2025-07-18 10:45:25,861 - src.hybrid_threat_detection.features.encoding - INFO - Saved encoding metadata to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase2/encoding/encoding_metadata.json
+2025-07-18 10:45:25,864 - __main__ - INFO - Saved encoded xss data to src/hybrid_threat_detection/results/phase2/encoding/xss_encoded.csv
+2025-07-18 10:45:25,870 - __main__ - INFO - Saved encoded sql_injection data to src/hybrid_threat_detection/results/phase2/encoding/sql_injection_encoded.csv
+2025-07-18 10:45:25,883 - __main__ - INFO - Saved encoded path_traversal data to src/hybrid_threat_detection/results/phase2/encoding/path_traversal_encoded.csv
+2025-07-18 10:45:25,883 - __main__ - INFO - Encoding completed successfully!
+2025-07-18 10:45:25,883 - __main__ - INFO - 
+Encoding Summary:
+2025-07-18 10:45:25,883 - __main__ - INFO - 
+Dataset: xss
+2025-07-18 10:45:25,883 - __main__ - INFO - Attack type: XSS
+2025-07-18 10:45:25,883 - __main__ - INFO - Label distribution: {0: 100}
+2025-07-18 10:45:25,883 - __main__ - INFO - Original label column: event_type
+2025-07-18 10:45:25,883 - __main__ - INFO - 
+Dataset: sql_injection
+2025-07-18 10:45:25,883 - __main__ - INFO - Attack type: SQLI
+2025-07-18 10:45:25,883 - __main__ - INFO - Label distribution: {0: 82, 1: 18}
+2025-07-18 10:45:25,883 - __main__ - INFO - Original label column: alert
+2025-07-18 10:45:25,883 - __main__ - INFO - 
+Dataset: path_traversal
+2025-07-18 10:45:25,883 - __main__ - INFO - Attack type: PathTraversal
+2025-07-18 10:45:25,883 - __main__ - INFO - Label distribution: {0: 55, 1: 45}
+2025-07-18 10:45:25,883 - __main__ - INFO - Original label column: alert
+2025-07-18 10:49:41,221 - __main__ - ERROR - Splitting failed: [Errno 2] No such file or directory: 'src\\hybrid_threat_detection\\config\\splitting_config.json'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_splitting.py", line 20, in main
+    config = load_json("src\hybrid_threat_detection\config\splitting_config.json")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/utils/helpers.py", line 33, in load_json
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\hybrid_threat_detection\\config\\splitting_config.json'
+2025-07-18 10:54:47,373 - __main__ - ERROR - Vectorization failed: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/config/vectorization_config.json'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/run_vectorization.py", line 19, in main
+    config = load_json("src/hybrid_threat_detection/config/vectorization_config.json")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/utils/helpers.py", line 33, in load_json
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/hybrid_threat_detection/config/vectorization_config.json'
+2025-07-18 10:55:45,122 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vectorizing dataset: xss
+2025-07-18 10:55:45,123 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying TF-IDF to xss
+2025-07-18 10:55:45,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - TF-IDF completed for xss. Shape: (100, 138)
+2025-07-18 10:55:45,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying DL vectorization to xss
+2025-07-18 10:55:45,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Tokenizing texts for xss
+2025-07-18 10:55:45,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vocab size for xss: 70
+2025-07-18 10:55:45,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Padded sequences to length 100. Shape: (100, 100)
+2025-07-18 10:55:45,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loading glove embeddings with dim 100
+2025-07-18 10:55:45,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Downloading glove-wiki-gigaword-100 embeddings...
+2025-07-18 10:55:45,126 - gensim.downloader - INFO - Creating /home/jupyter5/gensim-data
+2025-07-18 10:55:52,607 - gensim.downloader - INFO - glove-wiki-gigaword-100 downloaded
+2025-07-18 10:55:52,608 - gensim.models.keyedvectors - INFO - loading projection weights from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz
+2025-07-18 10:56:06,261 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (400000, 100) matrix of type float32 from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2025-07-18T10:56:06.261397', 'gensim': '4.3.3', 'python': '3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0]', 'platform': 'Linux-6.8.0-60-generic-x86_64-with-glibc2.39', 'event': 'load_word2vec_format'}
+2025-07-18 10:56:06,349 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loaded 400000 word vectors from glove-wiki-gigaword-100
+2025-07-18 10:56:06,356 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Created embedding matrix with shape (70, 100)
+2025-07-18 10:56:06,375 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vectorizing dataset: sql_injection
+2025-07-18 10:56:06,376 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying TF-IDF to sql_injection
+2025-07-18 10:56:06,377 - src.hybrid_threat_detection.features.text_vectorizer - INFO - TF-IDF completed for sql_injection. Shape: (100, 19)
+2025-07-18 10:56:06,377 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying DL vectorization to sql_injection
+2025-07-18 10:56:06,377 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Tokenizing texts for sql_injection
+2025-07-18 10:56:06,378 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vocab size for sql_injection: 21
+2025-07-18 10:56:06,378 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Padded sequences to length 100. Shape: (100, 100)
+2025-07-18 10:56:06,378 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loading glove embeddings with dim 100
+2025-07-18 10:56:06,378 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Downloading glove-wiki-gigaword-100 embeddings...
+2025-07-18 10:56:06,410 - gensim.models.keyedvectors - INFO - loading projection weights from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz
+2025-07-18 10:56:20,013 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (400000, 100) matrix of type float32 from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2025-07-18T10:56:20.013068', 'gensim': '4.3.3', 'python': '3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0]', 'platform': 'Linux-6.8.0-60-generic-x86_64-with-glibc2.39', 'event': 'load_word2vec_format'}
+2025-07-18 10:56:20,097 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loaded 400000 word vectors from glove-wiki-gigaword-100
+2025-07-18 10:56:20,104 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Created embedding matrix with shape (21, 100)
+2025-07-18 10:56:20,123 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vectorizing dataset: path_traversal
+2025-07-18 10:56:20,123 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying TF-IDF to path_traversal
+2025-07-18 10:56:20,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - TF-IDF completed for path_traversal. Shape: (100, 60)
+2025-07-18 10:56:20,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Applying DL vectorization to path_traversal
+2025-07-18 10:56:20,125 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Tokenizing texts for path_traversal
+2025-07-18 10:56:20,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Vocab size for path_traversal: 33
+2025-07-18 10:56:20,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Padded sequences to length 100. Shape: (100, 100)
+2025-07-18 10:56:20,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loading glove embeddings with dim 100
+2025-07-18 10:56:20,126 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Downloading glove-wiki-gigaword-100 embeddings...
+2025-07-18 10:56:20,161 - gensim.models.keyedvectors - INFO - loading projection weights from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz
+2025-07-18 10:56:33,730 - gensim.utils - INFO - KeyedVectors lifecycle event {'msg': 'loaded (400000, 100) matrix of type float32 from /home/jupyter5/gensim-data/glove-wiki-gigaword-100/glove-wiki-gigaword-100.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2025-07-18T10:56:33.730329', 'gensim': '4.3.3', 'python': '3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0]', 'platform': 'Linux-6.8.0-60-generic-x86_64-with-glibc2.39', 'event': 'load_word2vec_format'}
+2025-07-18 10:56:33,814 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Loaded 400000 word vectors from glove-wiki-gigaword-100
+2025-07-18 10:56:33,821 - src.hybrid_threat_detection.features.text_vectorizer - INFO - Created embedding matrix with shape (33, 100)
+2025-07-18 10:56:33,839 - __main__ - INFO - Vectorization completed successfully!
+2025-07-18 10:56:33,840 - __main__ - INFO - XSS TF-IDF shape: (100, 138)
+2025-07-18 10:56:33,840 - __main__ - INFO - XSS Padded Sequences shape: (100, 100)
+2025-07-18 10:57:54,793 - src.hybrid_threat_detection.features.splitting - INFO - Splitting dataset: xss
+2025-07-18 10:57:54,796 - src.hybrid_threat_detection.features.splitting - INFO - Train-test split completed. Train: 80, Test: 20
+2025-07-18 10:57:54,796 - src.hybrid_threat_detection.features.splitting - INFO - Completed splitting for xss
+2025-07-18 10:57:54,796 - src.hybrid_threat_detection.features.splitting - INFO - Splitting dataset: sql_injection
+2025-07-18 10:57:54,797 - src.hybrid_threat_detection.features.splitting - INFO - Train-test split completed. Train: 80, Test: 20
+2025-07-18 10:57:54,797 - src.hybrid_threat_detection.features.splitting - INFO - Completed splitting for sql_injection
+2025-07-18 10:57:54,797 - src.hybrid_threat_detection.features.splitting - INFO - Splitting dataset: path_traversal
+2025-07-18 10:57:54,799 - src.hybrid_threat_detection.features.splitting - INFO - Train-test split completed. Train: 80, Test: 20
+2025-07-18 10:57:54,799 - src.hybrid_threat_detection.features.splitting - INFO - Completed splitting for path_traversal
+2025-07-18 10:57:54,799 - src.hybrid_threat_detection.features.splitting - INFO - Saved splitting metadata to /home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase2/splits/split_metadata.json
+2025-07-18 10:57:54,821 - __main__ - INFO - Splitting completed successfully!
+2025-07-18 10:57:54,821 - __main__ - INFO - 
+Splitting Summary:
+2025-07-18 10:57:54,821 - __main__ - INFO - 
+Dataset: xss
+2025-07-18 10:57:54,821 - __main__ - INFO - Split type: train_test
+2025-07-18 10:57:54,821 - __main__ - INFO - Train samples: 80
+2025-07-18 10:57:54,821 - __main__ - INFO - Test samples: 20
+2025-07-18 10:57:54,821 - __main__ - INFO - Train label distribution: {0: 80}
+2025-07-18 10:57:54,821 - __main__ - INFO - 
+Dataset: sql_injection
+2025-07-18 10:57:54,821 - __main__ - INFO - Split type: train_test
+2025-07-18 10:57:54,821 - __main__ - INFO - Train samples: 80
+2025-07-18 10:57:54,821 - __main__ - INFO - Test samples: 20
+2025-07-18 10:57:54,821 - __main__ - INFO - Train label distribution: {0: 66, 1: 14}
+2025-07-18 10:57:54,821 - __main__ - INFO - 
+Dataset: path_traversal
+2025-07-18 10:57:54,821 - __main__ - INFO - Split type: train_test
+2025-07-18 10:57:54,821 - __main__ - INFO - Train samples: 80
+2025-07-18 10:57:54,821 - __main__ - INFO - Test samples: 20
+2025-07-18 10:57:54,821 - __main__ - INFO - Train label distribution: {0: 44, 1: 36}

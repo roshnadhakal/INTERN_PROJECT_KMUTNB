@@ -276,3 +276,8 @@ class DataCleaner:
     def get_cleaning_stats(self) -> Dict[str, Dict]:
         """Return cleaning statistics for all datasets."""
         return self.cleaning_stats
+
+if __name__ == "__main__":
+    cleaner = DataCleaner()
+    cleaner.load_data()  # Load data from DATA_FILES
+    cleaned = cleaner.clean_all_datasets()  # Run full cleaning

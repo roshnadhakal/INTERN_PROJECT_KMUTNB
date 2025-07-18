@@ -1,0 +1,126 @@
+2025-07-18 10:11:55,759 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+2025-07-18 10:13:14,446 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+2025-07-18 10:18:49,067 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+2025-07-18 10:22:34,641 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+2025-07-18 10:23:49,042 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+2025-07-18 10:24:50,760 - __main__ - ERROR - Encoding failed: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'
+Traceback (most recent call last):
+  File "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/run_encoding.py", line 14, in main
+    "xss": pd.read_csv("INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/jupyter5/.local/lib/python3.12/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase1/cleaning/xss_cleaned_sample.csv'

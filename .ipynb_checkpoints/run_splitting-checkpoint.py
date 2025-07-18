@@ -1,8 +1,8 @@
 import logging
 import os
 import pandas as pd
-from hybrid_threat_detection.features.splitting import DataSplitter
-from hybrid_threat_detection.utils.helpers import setup_logging, load_json
+from src.hybrid_threat_detection.features.splitting import DataSplitter
+from src.hybrid_threat_detection.utils.helpers import setup_logging, load_json
 
 def main():
     setup_logging()
@@ -11,13 +11,13 @@ def main():
     try:
         # 1. Load encoded data
         data = {
-            "xss": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase2/encoding/xss_encoded.csv"),
-            "sql_injection": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase2/encoding/sql_injection_encoded.csv"),
-            "path_traversal": pd.read_csv("hybrid-threat-detection/src/hybrid_threat_detection/results/phase2/encoding/path_traversal_encoded.csv")
+            "xss": pd.read_csv("src/hybrid_threat_detection/results/phase2/encoding/xss_encoded.csv"),
+            "sql_injection": pd.read_csv("src/hybrid_threat_detection/results/phase2/encoding/sql_injection_encoded.csv"),
+            "path_traversal": pd.read_csv("src/hybrid_threat_detection/results/phase2/encoding/path_traversal_encoded.csv")
         }
         
         # 2. Load config
-        config = load_json("hybrid-threat-detection\src\hybrid_threat_detection\config\splitting_config.json")
+        config = load_json("src/hybrid_threat_detection/config/splitting_config.json")
         
         # 3. Initialize and run splitter
         splitter = DataSplitter(config)
