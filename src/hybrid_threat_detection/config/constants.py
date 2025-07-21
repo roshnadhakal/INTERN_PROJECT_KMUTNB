@@ -17,8 +17,8 @@ DATA_FILES = {
 # Column mappings for each dataset
 COLUMN_MAPPINGS = {
     "xss": {
-        "payload_col": "post_data",  # Since there's no payload column
-        "label_col": "event_type",    # Need to verify if this indicates malicious/benign
+        "payload_col": "post_data",  
+        "label_col": "event_type",   
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     },

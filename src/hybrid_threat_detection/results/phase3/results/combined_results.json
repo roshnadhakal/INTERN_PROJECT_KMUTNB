@@ -1,0 +1,317 @@
+{
+  "xss": {
+    "random_forest": {
+      "best_params": {
+        "class_weight": "balanced",
+        "max_depth": null,
+        "min_samples_split": 5,
+        "n_estimators": 100
+      },
+      "metrics": {
+        "accuracy": 0.8695652173913043,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            20,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "roc_auc": 0.33333333333333326
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/xss/random_forest.pkl"
+    },
+    "xgboost": {
+      "best_params": {
+        "learning_rate": 0.01,
+        "max_depth": 3,
+        "n_estimators": 50
+      },
+      "metrics": {
+        "accuracy": 0.8695652173913043,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            20,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "roc_auc": 0.2666666666666666
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/xss/xgboost.pkl"
+    },
+    "logistic_regression": {
+      "best_params": {
+        "C": 1,
+        "class_weight": "balanced",
+        "max_iter": 1000,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "metrics": {
+        "accuracy": 0.21739130434782608,
+        "precision": 0.058823529411764705,
+        "recall": 0.3333333333333333,
+        "f1": 0.1,
+        "confusion_matrix": [
+          [
+            4,
+            16
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "roc_auc": 0.33333333333333326
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/xss/logistic_regression.pkl"
+    },
+    "svm": {
+      "best_params": {
+        "C": 10,
+        "gamma": "scale",
+        "kernel": "linear"
+      },
+      "metrics": {
+        "accuracy": 0.8695652173913043,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            20,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "roc_auc": 0.7999999999999999
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/xss/svm.pkl"
+    }
+  },
+  "sql_injection": {
+    "random_forest": {
+      "best_params": {
+        "class_weight": "balanced",
+        "max_depth": null,
+        "min_samples_split": 2,
+        "n_estimators": 50
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/random_forest.pkl"
+    },
+    "xgboost": {
+      "best_params": {
+        "learning_rate": 0.01,
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/xgboost.pkl"
+    },
+    "logistic_regression": {
+      "best_params": {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "max_iter": 1000,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/logistic_regression.pkl"
+    },
+    "svm": {
+      "best_params": {
+        "C": 0.1,
+        "gamma": "scale",
+        "kernel": "linear"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/svm.pkl"
+    }
+  },
+  "path_traversal": {
+    "random_forest": {
+      "best_params": {
+        "class_weight": "balanced",
+        "max_depth": null,
+        "min_samples_split": 2,
+        "n_estimators": 50
+      },
+      "metrics": {
+        "accuracy": 0.55,
+        "precision": 1.0,
+        "recall": 0.47058823529411764,
+        "f1": 0.64,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            9,
+            8
+          ]
+        ],
+        "roc_auc": 0.7352941176470589
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/path_traversal/random_forest.pkl"
+    },
+    "xgboost": {
+      "best_params": {
+        "learning_rate": 0.01,
+        "max_depth": 3,
+        "n_estimators": 50
+      },
+      "metrics": {
+        "accuracy": 0.85,
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1": 0.918918918918919,
+        "confusion_matrix": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            17
+          ]
+        ],
+        "roc_auc": 0.7352941176470589
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/path_traversal/xgboost.pkl"
+    },
+    "logistic_regression": {
+      "best_params": {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "max_iter": 1000,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "metrics": {
+        "accuracy": 0.55,
+        "precision": 1.0,
+        "recall": 0.47058823529411764,
+        "f1": 0.64,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            9,
+            8
+          ]
+        ],
+        "roc_auc": 0.7352941176470589
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/path_traversal/logistic_regression.pkl"
+    },
+    "svm": {
+      "best_params": {
+        "C": 0.1,
+        "gamma": "scale",
+        "kernel": "linear"
+      },
+      "metrics": {
+        "accuracy": 0.85,
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1": 0.918918918918919,
+        "confusion_matrix": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            17
+          ]
+        ],
+        "roc_auc": 0.5588235294117647
+      },
+      "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/path_traversal/svm.pkl"
+    }
+  }
+}

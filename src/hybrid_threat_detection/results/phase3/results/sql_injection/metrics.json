@@ -1,0 +1,105 @@
+{
+  "random_forest": {
+    "best_params": {
+      "class_weight": "balanced",
+      "max_depth": null,
+      "min_samples_split": 2,
+      "n_estimators": 50
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "roc_auc": 1.0
+    },
+    "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/random_forest.pkl"
+  },
+  "xgboost": {
+    "best_params": {
+      "learning_rate": 0.01,
+      "max_depth": 3,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "roc_auc": 1.0
+    },
+    "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/xgboost.pkl"
+  },
+  "logistic_regression": {
+    "best_params": {
+      "C": 0.1,
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "penalty": "l2",
+      "solver": "lbfgs"
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "roc_auc": 1.0
+    },
+    "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/logistic_regression.pkl"
+  },
+  "svm": {
+    "best_params": {
+      "C": 0.1,
+      "gamma": "scale",
+      "kernel": "linear"
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "roc_auc": 1.0
+    },
+    "model_path": "/home/jupyter5/notebooks/INTERN_PROJECT_KMUTNB/src/hybrid_threat_detection/results/phase3/models/sql_injection/svm.pkl"
+  }
+}

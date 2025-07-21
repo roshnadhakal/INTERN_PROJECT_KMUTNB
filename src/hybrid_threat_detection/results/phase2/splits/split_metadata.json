@@ -1,7 +1,7 @@
 {
   "xss": {
     "dataset": "xss",
-    "samples_total": 100,
+    "samples_total": 113,
     "split_config": {
       "test_size": 0.2,
       "random_state": 42,
@@ -11,19 +11,21 @@
       "split_by_attack_type": true
     },
     "split_type": "train_test",
-    "train_samples": 80,
-    "test_samples": 20,
+    "train_samples": 90,
+    "test_samples": 23,
     "train_label_dist": {
-      "0": 80
+      "0": 78,
+      "1": 12
     },
     "test_label_dist": {
-      "0": 20
+      "0": 20,
+      "1": 3
     },
     "train_attack_dist": {
-      "XSS": 80
+      "XSS": 90
     },
     "test_attack_dist": {
-      "XSS": 20
+      "XSS": 23
     }
   },
   "sql_injection": {
@@ -70,12 +72,12 @@
     "train_samples": 80,
     "test_samples": 20,
     "train_label_dist": {
-      "0": 44,
-      "1": 36
+      "1": 70,
+      "0": 10
     },
     "test_label_dist": {
-      "0": 11,
-      "1": 9
+      "1": 17,
+      "0": 3
     },
     "train_attack_dist": {
       "PathTraversal": 80

@@ -17,20 +17,20 @@ DATA_FILES = {
 # Column mappings for each dataset
 COLUMN_MAPPINGS = {
     "xss": {
-        "payload_col": "post_data",  # Since there's no payload column
-        "label_col": "event_type",    # Need to verify if this indicates malicious/benign
+        "payload_col": "post_data",  
+        "label_col": "event_type",   
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     },
     "sql_injection": {
         "payload_col": "payload",
-        "label_col": "alert",         # Need to verify
+        "label_col": "alert",         
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     },
     "path_traversal": {
         "payload_col": "payload",
-        "label_col": "alert",         # Need to verify
+        "label_col": "alert",         
         "source_ip": "src_ip",
         "timestamp": "@timestamp"
     }
