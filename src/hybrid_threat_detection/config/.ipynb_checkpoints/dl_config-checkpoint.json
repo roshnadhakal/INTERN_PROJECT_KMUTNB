@@ -1,0 +1,46 @@
+{
+    "models": {
+        "cnn": {
+            "embedding_dim": 100,
+            "filters": [64, 128, 256],
+            "kernel_sizes": [3, 5, 7],
+            "pool_size": 2,
+            "dense_units": [128, 64],
+            "dropout_rate": 0.5,
+            "batch_norm": true,
+            "learning_rate": 0.001,
+            "batch_size": 64,
+            "epochs": 100
+        },
+        "lstm": {
+            "embedding_dim": 100,
+            "lstm_units": [128, 64],
+            "dense_units": [64],
+            "dropout_rate": 0.3,
+            "recurrent_dropout": 0.2,
+            "batch_norm": true,
+            "learning_rate": 0.001,
+            "batch_size": 32,
+            "epochs": 100
+        }
+    },
+    "callbacks": {
+        "early_stopping": {
+            "monitor": "val_loss",
+            "patience": 10,
+            "restore_best_weights": true
+        },
+        "model_checkpoint": {
+            "monitor": "val_f1",
+            "mode": "max",
+            "save_best_only": true
+        },
+        "reduce_lr": {
+            "monitor": "val_loss",
+            "factor": 0.2,
+            "patience": 5,
+            "min_lr": 1e-6
+        }
+    },
+    "datasets": ["xss", "sql_injection", "path_traversal"]
+}

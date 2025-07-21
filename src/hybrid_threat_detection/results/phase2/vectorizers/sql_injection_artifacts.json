@@ -9,5 +9,12 @@
   ],
   "vocab_size": 21,
   "max_len": 100,
-  "timestamp": "2025-07-21T09:09:40.270681"
+  "timestamp": "2025-07-21T11:58:29.486695",
+  "artifacts": {
+    "tokenizer": "sql_injection_tokenizer.pkl",
+    "sequences": "sql_injection_sequences.npy",
+    "tfidf": "sql_injection_tfidf.pkl",
+    "bow": null,
+    "embedding_matrix": "embedding_matrix.npy"
+  }
 }

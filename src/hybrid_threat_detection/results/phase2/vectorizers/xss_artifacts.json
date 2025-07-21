@@ -9,5 +9,12 @@
   ],
   "vocab_size": 70,
   "max_len": 100,
-  "timestamp": "2025-07-21T09:09:26.546133"
+  "timestamp": "2025-07-21T11:58:15.848087",
+  "artifacts": {
+    "tokenizer": "xss_tokenizer.pkl",
+    "sequences": "xss_sequences.npy",
+    "tfidf": "xss_tfidf.pkl",
+    "bow": null,
+    "embedding_matrix": "embedding_matrix.npy"
+  }
 }

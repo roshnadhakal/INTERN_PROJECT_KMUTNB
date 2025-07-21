@@ -200,30 +200,35 @@ class TextVectorizer:
 
     def _apply_dl_vectorization(self, texts: list, dataset_name: str, config: Dict) -> Dict:
         """Apply deep learning vectorization pipeline."""
-        logger.info(f"Applying DL vectorization to {dataset_name}");
+        logger.info(f"Applying DL vectorization to {dataset_name}")
         
-        results = {};
+        results = {}
         
         # Tokenization
-        tokenizer, seqs = self._tokenize_texts(texts, dataset_name, config);
-        results['tokenizer'] = tokenizer;
-        results['sequences'] = seqs;
+        tokenizer, seqs = self._tokenize_texts(texts, dataset_name, config)
+        results['tokenizer'] = tokenizer
+        results['sequences'] = seqs
         
         # Sequence padding
-        padded_seqs = self._pad_sequences(seqs, config);
-        results['padded_sequences'] = padded_seqs;
+        padded_seqs = self._pad_sequences(seqs, config)
+        results['padded_sequences'] = padded_seqs
+        
+        # Save padded sequences to disk
+        sequences_path = os.path.join(self.vectorizer_dir, f"{dataset_name}_sequences.npy")
+        np.save(sequences_path, padded_seqs)
+        logger.info(f"Saved padded sequences to {sequences_path}")
         
         # Embeddings
         if config.get('use_embeddings', False):
-            embedding_matrix = self._load_embeddings(tokenizer, config);
+            embedding_matrix = self._load_embeddings(tokenizer, config)
             if embedding_matrix is not None:
-                results['embedding_matrix'] = embedding_matrix;
+                results['embedding_matrix'] = embedding_matrix
                 results['embedding_info'] = {
                     'vocab_size': self.vocab_size,
                     'embedding_dim': embedding_matrix.shape[1]
-                };
+                }
         
-        return results;
+        return results
 
 
     def _tokenize_texts(self, texts: list, dataset_name: str, config: Dict) -> Tuple:
@@ -378,11 +383,17 @@ class TextVectorizer:
 
     def save_vectorization_artifacts(self, dataset_name: str, results: Dict):
         """Save vectorization artifacts for a dataset."""
-        artifacts_path = os.path.join(self.vectorizer_dir, f"{dataset_name}_artifacts.json");
+        artifacts_path = os.path.join(self.vectorizer_dir, f"{dataset_name}_artifacts.json")
         save_json({
             'vectorization_methods': list(results.keys()),
             'vocab_size': self.vocab_size,
             'max_len': self.max_len,
-            'timestamp': pd.Timestamp.now().isoformat()
-        }, artifacts_path);
-    
+            'timestamp': pd.Timestamp.now().isoformat(),
+            'artifacts': {
+                'tokenizer': f"{dataset_name}_tokenizer.pkl",
+                'sequences': f"{dataset_name}_sequences.npy",
+                'tfidf': f"{dataset_name}_tfidf.pkl" if 'tfidf' in results else None,
+                'bow': f"{dataset_name}_bow.pkl" if 'bow' in results else None,
+                'embedding_matrix': 'embedding_matrix.npy' if 'embedding_matrix' in results else None
+            }
+        }, artifacts_path)
